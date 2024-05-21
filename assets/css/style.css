@@ -995,3 +995,11 @@ body.nav-active {
   background-image: url('../images/img-pattern.svg');
   background-repeat: repeat;
 }
+
+.about .abs-img-2::before{
+  inset: 0;
+  background-image: url('../images/badge-2-bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: rotate360 15s linear infinite;
+}
