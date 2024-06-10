@@ -159,3 +159,37 @@ window.addEventListener("mousemove", function (event) {
 
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const serviceCards = document.querySelectorAll('.service-card');
+
+  serviceCards.forEach(card => {
+      const audio = card.querySelector('.service-audio');
+
+      card.addEventListener('mouseenter', () => {
+          audio.currentTime = 0; // Fillon nga fillimi
+          audio.play();
+      });
+
+      card.addEventListener('mouseleave', () => {
+          audio.pause();
+          audio.currentTime = 0; // Ndërpret dhe kthehet në fillim
+      });
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const hoverElements = document.querySelectorAll('.hover-audio');
+
+  hoverElements.forEach(element => {
+      const audio = element.nextElementSibling;
+
+      element.addEventListener('mouseenter', () => {
+          audio.currentTime = 0; // Fillon nga fillimi
+          audio.play();
+      });
+
+      element.addEventListener('mouseleave', () => {
+          audio.pause();
+          audio.currentTime = 0; // Ndërpret dhe kthehet në fillim
+      });
+  });
+});
